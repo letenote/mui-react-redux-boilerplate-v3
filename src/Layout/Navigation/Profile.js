@@ -40,7 +40,7 @@ const Profile = ({ sidebarCollapse = false }) => {
   return (
     <Fragment>
       <ListItem sx={{ p: 0 }}>
-        <ListItemAvatar>
+        <ListItemAvatar sx={{ minWidth: !sidebarCollapse ? "50px" : "0px" }}>
           <StyledBadge
             overlap="circular"
             anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}

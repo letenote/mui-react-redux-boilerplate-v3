@@ -1,11 +1,11 @@
 import React, { Fragment, lazy, Suspense } from 'react';
 import { Routes, Route } from "react-router-dom";
-import Layout from '../Layout';
+import Layout from 'Layout';
 
-const RequireAuth = lazy(() => import('./RequireAuth'));
-const Dashboard = lazy(() => import('../Containers/Dashboard'));
-const Login = lazy(() => import('../Containers/Login/index'));
-const Page404 = lazy(() => import('../Containers/Page404'));
+const RequireAuth = lazy(() => import('Routes/RequireAuth'));
+const Dashboard = lazy(() => import('Containers/Dashboard'));
+const Login = lazy(() => import('Containers/Login/index'));
+const Page404 = lazy(() => import('Containers/Page404'));
 
 const Core = () => {
   return (

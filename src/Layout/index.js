@@ -2,12 +2,12 @@ import React from 'react';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { Root } from "@mui-treasury/layout";
-import Scheme from './Scheme';
+import Scheme from 'Layout/Scheme';
 import CssBaseline from "@mui/material/CssBaseline";
-import HeaderLayout from './Part/HeaderLayout';
-import ContentLayout from './Part/ContentLayout';
-import FooterLayout from './Part/FooterLayout';
-import SidebarLayout from './Part/SidebarLayout';
+import HeaderLayout from 'Layout/Part/HeaderLayout';
+import ContentLayout from 'Layout/Part/ContentLayout';
+import FooterLayout from 'Layout/Part/FooterLayout';
+import SidebarLayout from 'Layout/Part/SidebarLayout';
 import { Outlet, useLocation } from "react-router-dom";
 
 const Layout = () => {

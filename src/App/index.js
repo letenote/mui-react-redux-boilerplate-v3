@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { ThemeProvider } from '@mui/material/styles';
-import { theme } from '../Config/theme';
+import { Theme } from 'Config/Theme';
 import './App.css';
-import Routes from '../Routes';
+const Routes = lazy(() => import('Routes'));
 
 const App = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <Routes />
+    <ThemeProvider theme={Theme}>
+      <Suspense fallback={"loading app"}>
+        <Routes />
+      </Suspense>
     </ThemeProvider>
   )
 }

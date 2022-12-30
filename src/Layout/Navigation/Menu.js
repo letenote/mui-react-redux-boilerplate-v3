@@ -1,6 +1,6 @@
 import React, { lazy } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
-import { theme } from '../../Config/theme';
+import { Theme } from 'Config/Theme';
 const Divider = lazy(() => import('@mui/material/Divider'));
 const List = lazy(() => import('@mui/material/List'));
 const ListItem = lazy(() => import('@mui/material/ListItem'));
@@ -37,13 +37,13 @@ const menus = [
 ];
 
 const activeLinkStyle = {
-  color: theme.palette.primary.main
+  color: Theme.palette.primary.main
 }
 
 const Menu = ({ sidebarCollapse = false, onClick = () => { } }) => {
   const { pathname } = useLocation();
   return (
-    <List sx={{ mb: { xs: "85px", sm: "130px" } }}>
+    <List sx={{ mb: { xs: "15px", sm: "20px" } }}>
       {menus.map((menu, menuIndex) => {
         return (
           <ListItem key={menuIndex} disablePadding sx={{ display: 'block' }}>
