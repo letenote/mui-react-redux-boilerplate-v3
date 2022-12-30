@@ -1,6 +1,7 @@
 import React, { Fragment, lazy } from "react";
 import { styled } from '@mui/material/styles';
 import { red } from '@mui/material/colors';
+const List = lazy(() => import('@mui/material/List'));
 const ListItem = lazy(() => import('@mui/material/ListItem'));
 const ListItemText = lazy(() => import('@mui/material/ListItemText'));
 const ListItemAvatar = lazy(() => import('@mui/material/ListItemAvatar'));
@@ -38,7 +39,7 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 
 const Profile = ({ sidebarCollapse = false }) => {
   return (
-    <Fragment>
+    <List>
       <ListItem sx={{ p: 0 }}>
         <ListItemAvatar sx={{ minWidth: !sidebarCollapse ? "50px" : "0px" }}>
           <StyledBadge
@@ -58,7 +59,7 @@ const Profile = ({ sidebarCollapse = false }) => {
           secondary={`V ${process.env.REACT_APP_VERSION || "-.-"}`}
         />
       </ListItem>
-    </Fragment>
+    </List>
   )
 }
 
